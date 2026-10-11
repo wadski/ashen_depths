@@ -138,7 +138,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
   <header class="top">
     <a class="mark" href="#top">Ashen Depths</a>
     <nav aria-label="Sections">
-      <a href="#install">Install</a><a href="#campaign">Campaign</a><a href="#classes">Classes</a><a href="#notes">Patch notes</a><a href="#faq">FAQ</a>
+      <a href="guide.html">Guide</a><a href="#install">Install</a><a href="#campaign">Campaign</a><a href="#classes">Classes</a><a href="#notes">Patch notes</a><a href="#faq">FAQ</a>
     </nav>
   </header>
 
@@ -149,9 +149,9 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <p class="tag">Four Acts of open world, endless depths below. Loot your way to the bottom.</p>
     <a class="dl" id="dl" href="#">
       <b>Download for Windows</b>
-      <small id="dlsub">Latest release · one-click installer</small>
+      <small id="dlsub">Latest release · installer in a ZIP</small>
     </a>
-    <p class="under">Free · No account needed · <a id="allrel" href="#">All releases</a></p>
+    <p class="under">Free · No account needed · <a href="guide.html">Player guide</a> · <a id="allrel" href="#">All releases</a></p>
     <dl class="specs">
       <div><dt>OS</dt><dd>Windows 10 or 11, 64-bit</dd></div>
       <div><dt>Graphics</dt><dd>Any GPU with WebGL 2</dd></div>
@@ -165,10 +165,10 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <h2>Up and running in a minute</h2>
     <p class="lede">The installer sets everything up and adds shortcuts. There is nothing to configure.</p>
     <ol class="steps">
-      <li><h3>Download</h3><p>Grab <code>Ashen-Depths-Setup.exe</code> from the button above.</p></li>
-      <li><h3>Run the installer</h3><p>If Windows shows “Windows protected your PC”, choose <b>More info</b> then <b>Run anyway</b>.</p></li>
+      <li><h3>Download and unzip</h3><p>Grab <code>AshenDepths-Setup.zip</code> from the button above, then right-click it and choose <b>Extract All</b>.</p></li>
+      <li><h3>Run the installer</h3><p>Double-click <code>AshenDepths-Setup.exe</code>. If Windows shows “Windows protected your PC”, choose <b>More info</b> then <b>Run anyway</b>.</p></li>
       <li><h3>Launch</h3><p>Open Ashen Depths from the Start menu or the desktop shortcut.</p></li>
-      <li><h3>Make a hero</h3><p>Name your hero, pick a class and head down. Press <kbd>H</kbd> any time for the Codex.</p></li>
+      <li><h3>Make a hero</h3><p>Name your hero, pick a class and head down. Press <kbd>H</kbd> any time for the Codex, or read the <a href="guide.html">player guide</a>.</p></li>
     </ol>
   </section>
 
@@ -197,7 +197,16 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <h2>What's new</h2>
     <div class="notes">
       <article class="rel">
-        <div><div class="v">v0.2.0</div><div class="d">Build 2026-10-12a · The Acts</div></div>
+        <div><div class="v">v1.8</div><div class="d">Build 2026-10-12b · Single player</div></div>
+        <ul>
+          <li><b>Player guide.</b> A new guide page covers the controls, every system, all four Acts and their quests, the 12 class sets and all 140 legendaries.</li>
+          <li><b>Single player only.</b> Ashen Depths is a single-player game for now. The title screen, Options and Codex are simpler as a result.</li>
+          <li><b>Lighter install.</b> The game no longer opens network ports or asks for firewall access. Updating over an older install cleans up the leftover files.</li>
+          <li><b>Your heroes are safe.</b> Saved heroes carry over unchanged, and uninstalling now keeps your saves folder.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.7</div><div class="d">Build 2026-10-12a · The Acts</div></div>
         <ul>
           <li><b>The World Gate.</b> The town gate now leads to four open-world Acts, each with its own look, level band, stairways into the depths, a cultist camp, a landmark and three boss lairs.</li>
           <li><b>Act II, III and IV.</b> The Drowned Fens (levels 14–30), the Cinder Wastes (26–42) and the Pale Citadel (38–54) join the Ashen Reach. Each Act unlocks when you kill the previous Act's boss.</li>
@@ -208,7 +217,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v0.1.0</div><div class="d">First desktop release</div></div>
+        <div><div class="v">Earlier</div><div class="d">First desktop builds</div></div>
         <ul>
           <li><b>Desktop app.</b> Ashen Depths now installs as a Windows game with a one-click installer.</li>
           <li><b>Six classes:</b> Barbarian, Paladin, Ranger, Shaman, Sorcerer and Priest.</li>
@@ -234,11 +243,11 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <div class="faq">
       <details><summary>Windows says it protected my PC. Is the installer safe?</summary><p>That warning appears for new games that are not yet code-signed. Choose <b>More info</b>, then <b>Run anyway</b>. Only download the installer from this page or the official releases list.</p></details>
       <details><summary>How do I update?</summary><p>Download the latest installer from this page and run it. It installs over the old version, and your heroes stay put.</p></details>
-      <details><summary>Where are my heroes saved?</summary><p>On your PC, inside the game's own data folder. They are kept when you update. Uninstalling and reinstalling can remove them.</p></details>
+      <details><summary>Where are my heroes saved?</summary><p>In the <code>data</code> folder inside the game's install folder. They are kept when you update, and uninstalling leaves that folder in place.</p></details>
       <details><summary>How do I unlock the Challenge Dungeons?</summary><p>Finish all four Acts. Kill the Pale King at the end of Act IV and the stone in Ashen Hold opens. It tells you how many Acts you have left until then.</p></details>
       <details><summary>Will my old hero still work after the Acts update?</summary><p>Yes. Your progress moves onto Act I, so any bosses you already beat stay beaten.</p></details>
       <details><summary>Is there a browser or Mac version?</summary><p>No. Ashen Depths is a Windows desktop game.</p></details>
-      <details><summary>What are the controls?</summary><p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move, left and right click for your main skills, <kbd>1</kbd>–<kbd>4</kbd> for the rest, <kbd>Q</kbd> potion, <kbd>T</kbd> town portal, <kbd>I</kbd> inventory, <kbd>C</kbd> hero, <kbd>K</kbd> skills, <kbd>P</kbd> Ascension, <kbd>J</kbd> quest log, <kbd>M</kbd> map, <kbd>F11</kbd> fullscreen and <kbd>Esc</kbd> to pause. Every key can be rebound in Options.</p></details>
+      <details><summary>What are the controls?</summary><p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move, left and right click for your main skills, <kbd>1</kbd>–<kbd>4</kbd> for the rest, <kbd>Q</kbd> potion, <kbd>T</kbd> town portal, <kbd>I</kbd> inventory, <kbd>C</kbd> hero, <kbd>K</kbd> skills, <kbd>P</kbd> Ascension, <kbd>J</kbd> quest log, <kbd>M</kbd> map, <kbd>F11</kbd> fullscreen and <kbd>Esc</kbd> to pause. Every key can be rebound in Options. The <a href="guide.html">player guide</a> lists everything.</p></details>
     </div>
   </section>
 
@@ -251,7 +260,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
 <script>
 /* Set this to the GitHub repo that hosts the installer, e.g. "jamesm3eg/ashen-depths". */
 const REPO = "wadski/ashen_depths";
-const ASSET = "Ashen-Depths-Setup.exe";
+const ASSET = "AshenDepths-Setup.zip";
 
 const base = "https://github.com/" + REPO + "/releases";
 document.getElementById("dl").href = base + "/latest/download/" + ASSET;
