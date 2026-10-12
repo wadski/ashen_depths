@@ -165,8 +165,8 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <p class="under">Free · No account needed · <a href="guide.html">Player guide</a> · <a id="allrel" href="https://github.com/wadski/ashen_depths/releases">All releases</a></p>
     <dl class="specs">
       <div><dt>OS</dt><dd>Windows 10 or 11, 64-bit</dd></div>
-      <div><dt>Graphics</dt><dd>Any GPU with WebGL 2</dd></div>
-      <div><dt>Disk</dt><dd>About 300 MB</dd></div>
+      <div><dt>Graphics</dt><dd>Any GPU with OpenGL 3.3</dd></div>
+      <div><dt>Disk</dt><dd>About 250 MB</dd></div>
       <div><dt>Players</dt><dd>Single player</dd></div>
     </dl>
   </section>
@@ -222,6 +222,16 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <span class="depth">Floor 5 · Patch notes</span>
     <h2>What's new</h2>
     <div class="notes">
+      <article class="rel">
+        <div><div class="v">v3.0</div><div class="d">Build 2026-10-12 · New engine</div></div>
+        <ul>
+          <li><b>Rebuilt on the Godot engine.</b> Ashen Depths now runs on a real game engine instead of a web browser. Same game, same look, same saves: everything is rewritten in C# for a smoother, more efficient game.</li>
+          <li><b>Your heroes come with you.</b> The first time you start v3.0 it finds your heroes, keybinds and settings from v2.x and brings them across. Nothing is lost.</li>
+          <li><b>No download during setup.</b> The installer carries the whole game (about 60 MB), so it no longer fetches a runtime while installing.</li>
+          <li><b>Live class portraits.</b> The title screen shows each class's 3D model.</li>
+          <li><b>Saves in your profile.</b> Heroes are now saved in <code>%APPDATA%\Ashen Depths</code>, so the install folder no longer needs to be writable.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><div class="v">v2.5</div><div class="d">Build 2026-10-12v · Controller support</div></div>
         <ul>
@@ -356,7 +366,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
       <article class="rel next">
         <div><div class="v">Next</div><div class="d">Planned</div></div>
         <ul>
-          <li>Full 3D</li>
+          <li>Better shadows and lighting effects now that the game runs on Godot</li>
           <li>Three new classes: Druid, Monk and Warlock</li>
           <li>More detailed characters and gear</li>
         </ul>
@@ -370,7 +380,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <div class="faq">
       <details><summary>Windows says it protected my PC. Is the installer safe?</summary><p>That warning appears for new games that are not yet code-signed. Choose <b>More info</b>, then <b>Run anyway</b>. Only download the installer from this page or the official releases list.</p></details>
       <details><summary>How do I update?</summary><p>Download the latest installer from this page and run it. It installs over the old version, and your heroes stay put.</p></details>
-      <details><summary>Where are my heroes saved?</summary><p>In the <code>data</code> folder inside the game's install folder. They are kept when you update, and uninstalling leaves that folder in place.</p></details>
+      <details><summary>Where are my heroes saved?</summary><p>In <code>%APPDATA%\Ashen Depths</code> (paste that into the File Explorer address bar). They are kept when you update or uninstall. Heroes from v2.x, which lived in the <code>data</code> folder inside the install folder, are brought across automatically the first time you start v3.0.</p></details>
       <details><summary>How do I unlock Cinder and the Abyssal Trials?</summary><p>Finish all four Acts by killing the Pale King at the end of Act IV. Then, in Ashen Hold, open Options (Esc) and set the difficulty to Cinder 1 or higher. The Abyssal Trials stone and the Altar of the Fallen only work on Cinder.</p></details>
       <details><summary>Will my old hero still work after the Acts update?</summary><p>Yes. Your progress moves onto Act I, so any bosses you already beat stay beaten.</p></details>
       <details><summary>Is there a browser or Mac version?</summary><p>No. Ashen Depths is a Windows desktop game.</p></details>
