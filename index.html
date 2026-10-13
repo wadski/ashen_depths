@@ -223,9 +223,17 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <h2>What's new</h2>
     <div class="notes">
       <article class="rel">
-        <div><div class="v">v3.0.2</div><div class="d">Build 2026-10-13 · Sets reworked, live updates</div></div>
+        <div><div class="v">v1.0</div><div class="d">Build 2026-10-13 · Full release</div></div>
         <ul>
-          <li><b>The game now updates itself.</b> From this version on, Ashen Depths checks for a new version when it starts, downloads it and restarts into it. No more reinstalling. This is the last version you need to install by hand.</li>
+          <li><b>Rebuilt on the Godot engine.</b> Ashen Depths no longer runs inside a web browser. The whole game is rewritten in C# on the Godot engine: every class, skill, item, Act, quest, Abyssal Trial, uber boss and Ashforged weapon works exactly as before, and hero stats come out identical.</li>
+          <li><b>Your heroes come with you.</b> The first time you start 1.0 it finds your heroes from the beta and adds them to your roster, with their gear, gems, stash, Ascension points and quest progress. Your key bindings, volume and graphics settings come across too.</li>
+          <li><b>Same look, now native.</b> Ashen Hold, the dungeons and the four open-world Acts use the same models, scenery and lighting as before, and the interface, from the HUD to every panel and tooltip, looks just like it did.</li>
+          <li><b>Live class portraits.</b> The hero select screen shows each class's 3D model moving in its idle pose.</li>
+          <li><b>Controller support carried over.</b> Xbox, PlayStation and standard controllers work as in the beta, with the menu cursor, button prompts and rumble.</li>
+          <li><b>Sound and music.</b> The same synthesized sound effects and 8-bit soundtrack, with smooth crossfades between town, the Acts, the depths and boss fights.</li>
+          <li><b>Graphics options.</b> Low, Medium and High quality in Options, a frame rate counter, and windowed, borderless or fullscreen display.</li>
+          <li><b>A proper installer.</b> The setup carries the whole game (about 60 MB), gives it its own icon and saves your heroes in <code>%APPDATA%\Ashen Depths</code>, so updating or uninstalling never touches them.</li>
+          <li><b>The game now updates itself.</b> From this version on, Ashen Depths checks for a new version when it starts, downloads it and restarts into it. No more reinstalling. 1.0 is the last version you install by hand.</li>
           <li><b>Installs just for you.</b> The game now installs to your own profile, so setup and updates never ask for administrator rights. If you had the old all-users copy, setup offers to remove it. Your heroes are not touched.</li>
           <li><b>Every set reworked.</b> The 3-piece bonus is now a smaller damage boost (+50%, or +150% on uber sets), and every 5-piece bonus now changes how the skill plays and builds stacks of up to 20 that add damage plus Life, damage reduction, attack speed or movement speed. Thunderhide's Whirlwind now pulls enemies in and every hit grants a stack of Rage (+10% damage and +1% Life each). See the Item ledger for every set.</li>
           <li><b>Tougher monsters.</b> All monsters have 50% more Life.</li>
@@ -237,29 +245,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v3.0.1</div><div class="d">Build 2026-10-12b · Fixes</div></div>
-        <ul>
-          <li><b>Tooltips are back.</b> Hovering a skill in the Skills panel shows its cost, cooldown and description again, and hovering an item in your inventory, stash or gear shows its full stats and the comparison with what you have equipped.</li>
-          <li><b>Bows fixed.</b> Bone Archers no longer carry bows several times their own height.</li>
-          <li><b>Enemy weapons sized correctly.</b> Claws, clubs, swords and axes held by monsters now always match the size of the monster.</li>
-        </ul>
-      </article>
-      <article class="rel">
-        <div><div class="v">v3.0</div><div class="d">Build 2026-10-12 · New engine</div></div>
-        <ul>
-          <li><b>Rebuilt on the Godot engine.</b> Ashen Depths no longer runs inside a web browser. The whole game is rewritten in C# on the Godot engine: every class, skill, item, Act, quest, Abyssal Trial, uber boss and Ashforged weapon works exactly as before, and hero stats come out identical.</li>
-          <li><b>Your heroes come with you.</b> The first time you start v3.0 it finds your heroes from v2.x and adds them to your roster, with their gear, gems, stash, Ascension points and quest progress. Your key bindings, volume and graphics settings come across too.</li>
-          <li><b>Same look, now native.</b> Ashen Hold, the dungeons and the four open-world Acts use the same models, scenery and lighting as before, and the interface, from the HUD to every panel and tooltip, looks just like it did.</li>
-          <li><b>Live class portraits.</b> The hero select screen shows each class's 3D model moving in its idle pose.</li>
-          <li><b>Controller support carried over.</b> Xbox, PlayStation and standard controllers work as in v2.5, with the menu cursor, button prompts and rumble.</li>
-          <li><b>Sound and music.</b> The same synthesized sound effects and 8-bit soundtrack, with smooth crossfades between town, the Acts, the depths and boss fights.</li>
-          <li><b>A proper installer.</b> The setup carries the whole game (about 60 MB) instead of downloading a runtime while it installs. It upgrades an old install in place and gives the game its own icon.</li>
-          <li><b>Saves in your profile.</b> Heroes are now saved in <code>%APPDATA%\Ashen Depths</code>, so the install folder no longer needs to be writable, and updating or uninstalling never touches them.</li>
-          <li><b>Graphics options.</b> Low, Medium and High quality in Options, a frame rate counter, and windowed, borderless or fullscreen display.</li>
-        </ul>
-      </article>
-      <article class="rel">
-        <div><div class="v">v2.5</div><div class="d">Build 2026-10-12v · Controller support</div></div>
+        <div><div class="v">Beta 2.5</div><div class="d">Build 2026-10-12v · Controller support</div></div>
         <ul>
           <li><b>Play with a controller.</b> Xbox, PlayStation and most standard controllers work out of the box. Left stick moves, right stick aims (let go to auto-aim at the nearest enemy), LT / RT are the left and right mouse buttons, X Y LB RB cast skills 1–4, A talks to NPCs and uses portals, B drinks a potion.</li>
           <li><b>Menus by cursor.</b> With a panel open, the left stick moves a cursor: A clicks, X shift-clicks, B closes, the right stick scrolls. The D-pad opens Inventory, Skills, Map and Quests.</li>
@@ -267,7 +253,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.4</div><div class="d">Build 2026-10-12u · Quivers</div></div>
+        <div><div class="v">Beta 2.4</div><div class="d">Build 2026-10-12u · Quivers</div></div>
         <ul>
           <li><b>Quivers for Rangers.</b> Rangers now carry a quiver in the off-hand: flat damage, 8–15% attack speed and offensive properties. Three legendary quivers: Stormfletch Quiver, The Deadeye Quiver and Quiver of Endless Bounty. Ranger bows are two-handed.</li>
           <li><b>Two-handed Ashforged.</b> Barbarian Ashforged weapons are always two-handed, with double damage and double-strength properties, and Ashforged weapons can't be dual-wielded.</li>
@@ -276,7 +262,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.3.3</div><div class="d">Build 2026-10-12r · Ashforged rules</div></div>
+        <div><div class="v">Beta 2.3.3</div><div class="d">Build 2026-10-12r · Ashforged rules</div></div>
         <ul>
           <li><b>Level 50 to equip.</b> Ashforged gear can only be equipped by level 50 heroes. The tooltip shows the requirement in red until you reach it.</li>
           <li><b>Always item level 100.</b> Every Ashforged item, whether it drops, comes from an uber boss or is forged at the Blacksmith, is now item level 100.</li>
@@ -284,13 +270,13 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.3.2</div><div class="d">Build 2026-10-12p · Uber portal</div></div>
+        <div><div class="v">Beta 2.3.2</div><div class="d">Build 2026-10-12p · Uber portal</div></div>
         <ul>
           <li><b>Click to leave an uber lair.</b> Like the Abyssal Trials, the portal that opens when an uber boss dies no longer pulls you out when you walk over it. Click it to return to Ashen Hold, so you can pick up your loot first.</li>
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.3.1</div><div class="d">Build 2026-10-12n · Sealbearers and a new Ashen Hold</div></div>
+        <div><div class="v">Beta 2.3.1</div><div class="d">Build 2026-10-12n · Sealbearers and a new Ashen Hold</div></div>
         <ul>
           <li><b>Click to leave a Trial.</b> Walking over the Trial portal no longer pulls you out. Click the portal (or use the button in the upgrade panel) to return to Ashen Hold. If you still have gem upgrades left, the first click opens the upgrade panel instead.</li>
           <li><b>Trials stone moved.</b> The Abyssal Trials stone now stands in the west alcove of Ashen Hold, just above the Stash.</li>
@@ -299,14 +285,14 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.3</div><div class="d">Build 2026-10-12k · Ashforged sets</div></div>
+        <div><div class="v">Beta 2.3</div><div class="d">Build 2026-10-12k · Ashforged sets</div></div>
         <ul>
           <li><b>Ashforged sets.</b> Salvaging any Ashforged item gives an Ashen Core. The Blacksmith now forges an Ashforged version of any piece from all four of your class's sets, uber sets included, for 3 Ashen Cores, 3 Bound Sigils, 3 Ember Cores and 25,000 gold.</li>
           <li><b>Item level cap.</b> Ashforged items are capped at item level 100, so Ashforged gear no longer grows forever with Trial tier. Crafted Ashforged pieces roll at item level 70–100, rising with your highest Trial tier.</li>
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.2.1</div><div class="d">Build 2026-10-12j · Cinder difficulty</div></div>
+        <div><div class="v">Beta 2.2.1</div><div class="d">Build 2026-10-12j · Cinder difficulty</div></div>
         <ul>
           <li><b>Cinder difficulty.</b> The campaign is played on Normal. Beat the Pale King to unlock Cinder 1–10 in Options, changeable in Ashen Hold. Each level makes monsters 55% tougher and 30% deadlier, with more experience, gold and legendaries.</li>
           <li><b>Abyssal Trials replace the Challenge Dungeons.</b> The Trials stone now stands where the Challenge Dungeons were. Trials and uber bosses need Cinder 1 or higher; Cinder does not change Trial difficulty.</li>
@@ -316,7 +302,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.1</div><div class="d">Build 2026-10-12h · The Abyss</div></div>
+        <div><div class="v">Beta 2.1</div><div class="d">Build 2026-10-12h · The Abyss</div></div>
         <ul>
           <li><b>Abyssal Trials.</b> A new stone in Ashen Hold opens after the campaign. Pick a tier, fill the bar, and kill the Guardian within 10 minutes to unlock the next tier. Rewards include Ascension experience, uber Shards and legendary gem upgrades.</li>
           <li><b>Legendary gems.</b> Eight new gems for rings and amulets only, with ranks that climb without limit: Emberheart, Headsman's Garnet, Tyrant's Eye, Bloodstone, Storm Seal, Wardstone, Quickening Pearl and Echo Shard.</li>
@@ -327,7 +313,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v2.0</div><div class="d">Build 2026-10-12g · Music and boss lairs</div></div>
+        <div><div class="v">Beta 2.0</div><div class="d">Build 2026-10-12g · Music and boss lairs</div></div>
         <ul>
           <li><b>An 8-bit soundtrack.</b> Eight looping chiptune tracks: the title screen, Ashen Hold, one for each Act, the Challenge Dungeons, and a boss theme that kicks in when a boss is near. Set the Music volume in Options.</li>
           <li><b>Act bosses wait in their own dungeon.</b> Explore the Act and kill both lieutenants in the open world. Once Captain Rhea sends you after the Act boss, its lair opens into a dungeon with the boss at the far end. Its portal takes you back to the Act.</li>
@@ -336,7 +322,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v1.9.2</div><div class="d">Build 2026-10-12e · Performance</div></div>
+        <div><div class="v">Beta 1.9.2</div><div class="d">Build 2026-10-12e · Performance</div></div>
         <ul>
           <li><b>Lag spikes fixed.</b> Monster pathfinding in the open world was badly broken and could take most of each frame once a few packs chased you. It now runs about 60 times faster.</li>
           <li><b>No more boss cheese.</b> Bosses and elites that get stuck behind trees or rock leap to your side.</li>
@@ -346,7 +332,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v1.9.1</div><div class="d">Build 2026-10-12d · Loot and fixes</div></div>
+        <div><div class="v">Beta 1.9.1</div><div class="d">Build 2026-10-12d · Loot and fixes</div></div>
         <ul>
           <li><b>Bigger windows.</b> Inventory, Hero, Skills, Codex, Options and the town artisans' windows are about 30% larger, with bigger text.</li>
           <li><b>No more stairways in the Acts.</b> The endless depths now open only through the Challenge Dungeons stone, after all four Acts.</li>
@@ -360,7 +346,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v1.8</div><div class="d">Build 2026-10-12b · Single player</div></div>
+        <div><div class="v">Beta 1.8</div><div class="d">Build 2026-10-12b · Single player</div></div>
         <ul>
           <li><b>Player guide.</b> A new guide page covers the controls, every system, all four Acts and their quests, the 12 class sets and all 140 legendaries.</li>
           <li><b>Single player only.</b> Ashen Depths is a single-player game for now. The title screen, Options and Codex are simpler as a result.</li>
@@ -369,7 +355,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
         </ul>
       </article>
       <article class="rel">
-        <div><div class="v">v1.7</div><div class="d">Build 2026-10-12a · The Acts</div></div>
+        <div><div class="v">Beta 1.7</div><div class="d">Build 2026-10-12a · The Acts</div></div>
         <ul>
           <li><b>The World Gate.</b> The town gate now leads to four open-world Acts, each with its own look, level band, stairways into the depths, a cultist camp, a landmark and three boss lairs.</li>
           <li><b>Act II, III and IV.</b> The Drowned Fens (levels 14–30), the Cinder Wastes (26–42) and the Pale Citadel (38–54) join the Ashen Reach. Each Act unlocks when you kill the previous Act's boss.</li>
@@ -405,8 +391,8 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <h2>Questions</h2>
     <div class="faq">
       <details><summary>Windows says it protected my PC. Is the installer safe?</summary><p>That warning appears for new games that are not yet code-signed. Choose <b>More info</b>, then <b>Run anyway</b>. Only download the installer from this page or the official releases list.</p></details>
-      <details><summary>How do I update?</summary><p>Download the latest installer from this page and run it. It installs over the old version, and your heroes stay put.</p></details>
-      <details><summary>Where are my heroes saved?</summary><p>In <code>%APPDATA%\Ashen Depths</code> (paste that into the File Explorer address bar). They are kept when you update or uninstall. Heroes from v2.x, which lived in the <code>data</code> folder inside the install folder, are brought across automatically the first time you start v3.0.</p></details>
+      <details><summary>How do I update?</summary><p>From 1.0 on you don't have to: the game checks for a new version every time it starts, downloads it and restarts into it. If you are on a beta build, download the installer from this page once and run it. Your heroes stay put.</p></details>
+      <details><summary>Where are my heroes saved?</summary><p>In <code>%APPDATA%\Ashen Depths</code> (paste that into the File Explorer address bar). They are kept when you update or uninstall. Heroes from the beta, which lived in the <code>data</code> folder inside the install folder, are brought across automatically the first time you start 1.0.</p></details>
       <details><summary>How do I unlock Cinder and the Abyssal Trials?</summary><p>Finish all four Acts by killing the Pale King at the end of Act IV. Then, in Ashen Hold, open Options (Esc) and set the difficulty to Cinder 1 or higher. The Abyssal Trials stone and the Altar of the Fallen only work on Cinder.</p></details>
       <details><summary>Will my old hero still work after the Acts update?</summary><p>Yes. Your progress moves onto Act I, so any bosses you already beat stay beaten.</p></details>
       <details><summary>Is there a browser or Mac version?</summary><p>No. Ashen Depths is a Windows desktop game.</p></details>
