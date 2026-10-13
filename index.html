@@ -223,13 +223,39 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <h2>What's new</h2>
     <div class="notes">
       <article class="rel">
+        <div><div class="v">v3.0.2</div><div class="d">Build 2026-10-13 · Sets reworked, live updates</div></div>
+        <ul>
+          <li><b>The game now updates itself.</b> From this version on, Ashen Depths checks for a new version when it starts, downloads it and restarts into it. No more reinstalling. This is the last version you need to install by hand.</li>
+          <li><b>Installs just for you.</b> The game now installs to your own profile, so setup and updates never ask for administrator rights. If you had the old all-users copy, setup offers to remove it. Your heroes are not touched.</li>
+          <li><b>Every set reworked.</b> The 3-piece bonus is now a smaller damage boost (+50%, or +150% on uber sets), and every 5-piece bonus now changes how the skill plays and builds stacks of up to 20 that add damage plus Life, damage reduction, attack speed or movement speed. Thunderhide's Whirlwind now pulls enemies in and every hit grants a stack of Rage (+10% damage and +1% Life each). See the Item ledger for every set.</li>
+          <li><b>Tougher monsters.</b> All monsters have 50% more Life.</li>
+          <li><b>Quest experience halved.</b> Quests give half the experience they used to.</li>
+          <li><b>Gem Altar.</b> After you beat an Abyssal Trial Guardian in time, a Gem Altar rises where it fell. Walk up and click it to upgrade your legendary gems, instead of the window popping up on its own.</li>
+          <li><b>Set pieces always roll your main stat.</b> Like rares and legendaries, every set piece now has Strength, Dexterity or Intelligence for your class.</li>
+          <li><b>No more skill lock.</b> Pressing a skill while holding down your attack now always casts it straight after the current swing, instead of being swallowed until you pressed it again.</li>
+          <li><b>Menus keep their place.</b> Scrolled panels no longer jump back to the top when you hover over a skill or item.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v3.0.1</div><div class="d">Build 2026-10-12b · Fixes</div></div>
+        <ul>
+          <li><b>Tooltips are back.</b> Hovering a skill in the Skills panel shows its cost, cooldown and description again, and hovering an item in your inventory, stash or gear shows its full stats and the comparison with what you have equipped.</li>
+          <li><b>Bows fixed.</b> Bone Archers no longer carry bows several times their own height.</li>
+          <li><b>Enemy weapons sized correctly.</b> Claws, clubs, swords and axes held by monsters now always match the size of the monster.</li>
+        </ul>
+      </article>
+      <article class="rel">
         <div><div class="v">v3.0</div><div class="d">Build 2026-10-12 · New engine</div></div>
         <ul>
-          <li><b>Rebuilt on the Godot engine.</b> Ashen Depths now runs on a real game engine instead of a web browser. Same game, same look, same saves: everything is rewritten in C# for a smoother, more efficient game.</li>
-          <li><b>Your heroes come with you.</b> The first time you start v3.0 it finds your heroes, keybinds and settings from v2.x and brings them across. Nothing is lost.</li>
-          <li><b>No download during setup.</b> The installer carries the whole game (about 60 MB), so it no longer fetches a runtime while installing.</li>
-          <li><b>Live class portraits.</b> The title screen shows each class's 3D model.</li>
-          <li><b>Saves in your profile.</b> Heroes are now saved in <code>%APPDATA%\Ashen Depths</code>, so the install folder no longer needs to be writable.</li>
+          <li><b>Rebuilt on the Godot engine.</b> Ashen Depths no longer runs inside a web browser. The whole game is rewritten in C# on the Godot engine: every class, skill, item, Act, quest, Abyssal Trial, uber boss and Ashforged weapon works exactly as before, and hero stats come out identical.</li>
+          <li><b>Your heroes come with you.</b> The first time you start v3.0 it finds your heroes from v2.x and adds them to your roster, with their gear, gems, stash, Ascension points and quest progress. Your key bindings, volume and graphics settings come across too.</li>
+          <li><b>Same look, now native.</b> Ashen Hold, the dungeons and the four open-world Acts use the same models, scenery and lighting as before, and the interface, from the HUD to every panel and tooltip, looks just like it did.</li>
+          <li><b>Live class portraits.</b> The hero select screen shows each class's 3D model moving in its idle pose.</li>
+          <li><b>Controller support carried over.</b> Xbox, PlayStation and standard controllers work as in v2.5, with the menu cursor, button prompts and rumble.</li>
+          <li><b>Sound and music.</b> The same synthesized sound effects and 8-bit soundtrack, with smooth crossfades between town, the Acts, the depths and boss fights.</li>
+          <li><b>A proper installer.</b> The setup carries the whole game (about 60 MB) instead of downloading a runtime while it installs. It upgrades an old install in place and gives the game its own icon.</li>
+          <li><b>Saves in your profile.</b> Heroes are now saved in <code>%APPDATA%\Ashen Depths</code>, so the install folder no longer needs to be writable, and updating or uninstalling never touches them.</li>
+          <li><b>Graphics options.</b> Low, Medium and High quality in Options, a frame rate counter, and windowed, borderless or fullscreen display.</li>
         </ul>
       </article>
       <article class="rel">
