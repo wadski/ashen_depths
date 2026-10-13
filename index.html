@@ -239,6 +239,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
           <li><b>Tougher monsters.</b> All monsters have 50% more Life.</li>
           <li><b>Quest experience halved.</b> Quests give half the experience they used to.</li>
           <li><b>Gem Altar.</b> After you beat an Abyssal Trial Guardian in time, a Gem Altar rises where it fell. Walk up and click it to upgrade your legendary gems, instead of the window popping up on its own.</li>
+          <li><b>Crafted gear keeps up with you.</b> Items forged at the Blacksmith now roll at the item level of your highest cleared Abyssal Trial (tier T gives item level 52 + T, the same as Trial drops), or your level or deepest floor if those are higher. No more item level 1 crafts.</li>
           <li><b>Set pieces always roll your main stat.</b> Like rares and legendaries, every set piece now has Strength, Dexterity or Intelligence for your class.</li>
           <li><b>No more skill lock.</b> Pressing a skill while holding down your attack now always casts it straight after the current swing, instead of being swallowed until you pressed it again.</li>
           <li><b>Menus keep their place.</b> Scrolled panels no longer jump back to the top when you hover over a skill or item.</li>
@@ -414,6 +415,24 @@ const ASSET = "AshenDepths-Setup.exe";
 const base = "https://github.com/" + REPO + "/releases";
 document.getElementById("dl").href = base + "/latest/download/" + ASSET;
 document.getElementById("allrel").href = base;
+
+/* Point the button at the most recently published release that has the installer. Goes by date, not by the
+   "Latest" badge or version number, because the 1.0 numbering restarted below the old 2.x beta tags. */
+(async () => {
+  try {
+    const r = await fetch("https://api.github.com/repos/" + REPO + "/releases?per_page=30", { headers: { Accept: "application/vnd.github+json" } });
+    if (!r.ok) return;
+    let best = null, bestAsset = null;
+    for (const rel of await r.json()) {
+      if (rel.draft || rel.prerelease) continue;
+      const a = (rel.assets || []).find(x => x.name === ASSET) || (rel.assets || []).find(x => /setup.*\.exe$/i.test(x.name));
+      if (a && (!best || rel.published_at > best.published_at)) { best = rel; bestAsset = a; }
+    }
+    if (!best) return;
+    document.getElementById("dl").href = bestAsset.browser_download_url;
+    document.getElementById("dlsub").textContent = best.tag_name + " · one-click installer";
+  } catch (e) { /* keep the releases/latest link */ }
+})();
 
 const CLASSES = [
   {n:"Barbarian",r:"Melee · Strength",res:"Rage",c:"#d2402c",d:"Builds Rage by smashing things, then spends it on crushing blows and leaps.",s:"M8 36 L22 22 M22 22 l-4 -10 l10 4 z M26 26 L40 40 M16 30 l6 6"},
