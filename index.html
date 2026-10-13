@@ -223,6 +223,17 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <h2>What's new</h2>
     <div class="notes">
       <article class="rel">
+        <div><div class="v">v1.0.3</div><div class="d">Build 2026-10-13 · Easier levelling</div></div>
+        <ul>
+          <li><b>Easier levelling in the Acts.</b> Monsters in the four Acts and their boss lairs are back to their normal Life. The +50% Life from 1.0 now applies only in the depths, Abyssal Trials and uber lairs.</li>
+          <li><b>Safer saves.</b> Hero saves are checked after every write and the game keeps three backups. If the save file is ever damaged it loads the last good backup instead of starting with an empty hero list.</li>
+          <li><b>Stray controllers ignored.</b> Only real game controllers are read, so lighting, mouse or macro software that shows up as a controller can no longer press buttons or move your hero.</li>
+          <li><b>Update when you choose.</b> When a new version is out, the title screen shows an <b>Update now</b> button above the patch notes, and the game reminds you when you enter the world. Nothing downloads until you click it. The game then restarts into the new version.</li>
+          <li><b>Patch notes stay current.</b> The title screen loads the latest patch notes from the website, so you always see what is new.</li>
+          <li><b>Title screen art.</b> The title screen now shows the Ashen Depths key art under the logo.</li>
+        </ul>
+      </article>
+      <article class="rel">
         <div><div class="v">v1.0.2</div><div class="d">Build 2026-10-13 · Title screen and fixes</div></div>
         <ul>
           <li><b>New title screen.</b> Your heroes are listed down the left with New hero and Options at the bottom, and the right side shows these patch notes and the update status: checking, up to date, downloading, or ready.</li>
@@ -242,10 +253,10 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
           <li><b>Sound and music.</b> The same synthesized sound effects and 8-bit soundtrack, with smooth crossfades between town, the Acts, the depths and boss fights.</li>
           <li><b>Graphics options.</b> Low, Medium and High quality in Options, a frame rate counter, and windowed, borderless or fullscreen display.</li>
           <li><b>A proper installer.</b> The setup carries the whole game (about 60 MB), gives it its own icon and saves your heroes in <code>%APPDATA%\Ashen Depths</code>, so updating or uninstalling never touches them.</li>
-          <li><b>The game now updates itself.</b> From this version on, Ashen Depths checks for a new version when it starts, downloads it and restarts into it. No more reinstalling. 1.0 is the last version you install by hand.</li>
+          <li><b>In-game updates.</b> From this version on, Ashen Depths checks for a new version when it starts, and you update from the title screen. No more reinstalling.</li>
           <li><b>Installs just for you.</b> The game now installs to your own profile, so setup and updates never ask for administrator rights. If you had the old all-users copy, setup offers to remove it. Your heroes are not touched.</li>
           <li><b>Every set reworked.</b> The 3-piece bonus is now a smaller damage boost (+50%, or +150% on uber sets), and every 5-piece bonus now changes how the skill plays and builds stacks of up to 20 that add damage plus Life, damage reduction, attack speed or movement speed. Thunderhide's Whirlwind now pulls enemies in and every hit grants a stack of Rage (+10% damage and +1% Life each). See the Item ledger for every set.</li>
-          <li><b>Tougher monsters.</b> All monsters have 50% more Life.</li>
+          <li><b>Tougher monsters.</b> Monsters in the depths, Abyssal Trials and uber lairs have 50% more Life.</li>
           <li><b>Quest experience halved.</b> Quests give half the experience they used to.</li>
           <li><b>Gem Altar.</b> After you beat an Abyssal Trial Guardian in time, a Gem Altar rises where it fell. Walk up and click it to upgrade your legendary gems, instead of the window popping up on its own.</li>
           <li><b>Set pieces always roll your main stat.</b> Like rares and legendaries, every set piece now has Strength, Dexterity or Intelligence for your class.</li>
@@ -400,7 +411,7 @@ footer .mark{font:18px var(--f-display);color:var(--muted)}
     <h2>Questions</h2>
     <div class="faq">
       <details><summary>Windows says it protected my PC. Is the installer safe?</summary><p>That warning appears for new games that are not yet code-signed. Choose <b>More info</b>, then <b>Run anyway</b>. Only download the installer from this page or the official releases list.</p></details>
-      <details><summary>How do I update?</summary><p>From 1.0 on you don't have to: the game checks for a new version every time it starts, downloads it and restarts into it. If you are on a beta build, download the installer from this page once and run it. Your heroes stay put.</p></details>
+      <details><summary>How do I update?</summary><p>Start the game. When a new version is out, the title screen shows an <b>Update now</b> button; click it and the game downloads the update and restarts. If you are on 1.0.2 or older, or a beta build, download the installer from this page once and run it. Your heroes stay put.</p></details>
       <details><summary>Where are my heroes saved?</summary><p>In <code>%APPDATA%\Ashen Depths</code> (paste that into the File Explorer address bar). They are kept when you update or uninstall. Heroes from the beta, which lived in the <code>data</code> folder inside the install folder, are brought across automatically the first time you start 1.0.</p></details>
       <details><summary>How do I unlock Cinder and the Abyssal Trials?</summary><p>Finish all four Acts by killing the Pale King at the end of Act IV. Then, in Ashen Hold, open Options (Esc) and set the difficulty to Cinder 1 or higher. The Abyssal Trials stone and the Altar of the Fallen only work on Cinder.</p></details>
       <details><summary>Will my old hero still work after the Acts update?</summary><p>Yes. Your progress moves onto Act I, so any bosses you already beat stay beaten.</p></details>
