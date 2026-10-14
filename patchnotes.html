@@ -82,6 +82,14 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--edge);color:v
 <p class="small">Everything that changed in each update. The game's title screen and the Discord announcements read these from this page. To update, open the game and click <b>Update</b> on the title screen.</p>
     <div class="notes">
       <article class="rel">
+        <div><div class="v">v1.0.12</div><div class="d">Build 2026-10-14 · Click fixes</div></div>
+        <ul>
+          <li><b>Quick clicks cast again.</b> A very fast click of the left or right mouse button, pressed and let go in between two frames, could be missed entirely, so spamming a skill sometimes did nothing. Every click now counts.</li>
+          <li><b>Clicks no longer get lost behind the interface.</b> Invisible parts of the interface (empty layout boxes, faded-out messages) could catch clicks meant for the world, so attacks or moves in those spots did nothing. They now pass straight through; real buttons still work as before.</li>
+          <li><b>A "stuck" controller no longer takes over.</b> Some mouse, keyboard or RGB software shows up as a controller with buttons that always read as held. Anything held when a controller is first seen is now ignored until it is let go, so it can't cast skills, move your hero or block the mouse.</li>
+        </ul>
+      </article>
+      <article class="rel">
         <div><div class="v">v1.0.11</div><div class="d">Build 2026-10-14 · Skill and update fixes</div></div>
         <ul>
           <li><b>Skills no longer fire twice.</b> A single click of the left or right mouse button (or a controller trigger) cast the skill, then cast it again as soon as the first cast finished, and that phantom second cast blocked your other mouse skill until it was done. One click is now one cast. Holding a button still attacks continuously, and a click made while a cast is still going is remembered and fires right after it, as before.</li>
