@@ -82,6 +82,13 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--edge);color:v
 <p class="small">Everything that changed in each update. The game's title screen and the Discord announcements read these from this page. To update, open the game and click <b>Update</b> on the title screen.</p>
     <div class="notes">
       <article class="rel">
+        <div><div class="v">v1.0.13</div><div class="d">Build 2026-10-14 · Update error fixed for good</div></div>
+        <ul>
+          <li><b>No more ".NET assemblies not found" after an update.</b> The game used to unpack its program files into a hidden cache folder every time it started, and after an update leftover or locked files there could stop it from launching. Those files now install right next to the game instead, so there is nothing to unpack and nothing to trip over. If you saw the error before, this update clears it.</li>
+          <li><b>The game starts faster</b>, since it no longer unpacks anything on launch.</li>
+        </ul>
+      </article>
+      <article class="rel">
         <div><div class="v">v1.0.12</div><div class="d">Build 2026-10-14 · Click fixes</div></div>
         <ul>
           <li><b>Quick clicks cast again.</b> A very fast click of the left or right mouse button, pressed and let go in between two frames, could be missed entirely, so spamming a skill sometimes did nothing. Every click now counts.</li>
