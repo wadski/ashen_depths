@@ -1,0 +1,21 @@
+# Posts the patch notes to Discord when a release is published (the notes come from index.html for that version).
+# Setup: repo Settings -> Secrets and variables -> Actions -> New secret DISCORD_WEBHOOK = the channel's webhook URL.
+# You can also post any version by hand: Actions tab -> "Discord patch notes" -> Run workflow.
+name: Discord patch notes
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version(s) to post, e.g. v1.0.10 or v1.0.7,v1.0.8,v1.0.9 (empty = newest on the page)"
+        required: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Post notes
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python3 .github/scripts/post_patch_notes.py "${{ github.event.release.tag_name || inputs.version }}"
