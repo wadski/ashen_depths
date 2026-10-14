@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ashen Depths patch notes: everything that changed in each update.">
+<title>Patch notes · Ashen Depths</title>
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/logo-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Ashen Depths · Patch notes">
+<meta property="og:description" content="A free action RPG for Windows. Four Acts, a dungeon that keeps going down, co-op for up to four.">
+<meta property="og:image" content="assets/og-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#120c09;--panel:#1a120e;--edge:#3a2a20;--text:#e6d9c4;--muted:#9c8c76;--gold:#d8b060;--ember:#e0703a;--f-display:"IM Fell English SC",Georgia,serif;--f-body:"Alegreya Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 var(--f-body)}
+a{color:var(--gold)}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px 60px}
+header{display:flex;align-items:center;gap:12px;padding:22px 0 10px;border-bottom:1px solid var(--edge);flex-wrap:wrap}
+header img{width:34px;height:34px;border-radius:8px}
+header .name{font:26px var(--f-display);color:var(--gold);text-decoration:none;margin-right:auto}
+header nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:15px}
+header nav a:hover{color:var(--text)}
+header nav a.discord{display:inline-flex;align-items:center;gap:6px;background:#5865F2;color:#fff;padding:5px 12px;border-radius:999px;font-weight:600}
+header nav a.discord:hover{background:#4752c4;color:#fff}
+.logo{display:block;width:300px;height:300px;margin:34px auto 18px;border-radius:60px;box-shadow:0 0 50px rgba(255,140,50,.3)}
+h2{font:400 28px/1.2 var(--f-display);color:var(--gold);margin:46px 0 10px;padding-top:18px;border-top:1px solid var(--edge)}
+h3{font:700 17px var(--f-body);margin:18px 0 4px}
+p{margin:0 0 14px}
+.lede{font:italic 21px/1.45 "IM Fell English",Georgia,serif;color:#d6c7ad;margin-bottom:22px}
+.dl{display:inline-block;background:#2a1a10;border:1px solid #6a4a2a;border-radius:6px;padding:12px 22px;text-decoration:none;color:var(--gold);font:22px var(--f-display);margin:6px 0 4px}
+.dl:hover{background:#34200f}
+.dl small{display:block;font:14px var(--f-body);color:var(--muted);margin-top:2px}
+.small{color:var(--muted);font-size:15px}
+.shot{width:100%;height:auto;border:1px solid var(--edge);border-radius:4px;margin:18px 0 6px;display:block}
+.cap{color:var(--muted);font-size:14px;margin:0 0 18px}
+ul{padding-left:22px;margin:0 0 14px}
+li{margin:0 0 6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px}
+.two p{margin:0 0 8px}
+.classes p{display:flex;gap:12px;align-items:flex-start}
+.classes img{width:64px;height:64px;flex:none;border-radius:50%;background:#241810;border:1px solid var(--edge)}
+.classes p b{color:var(--gold)}
+.acts li{margin-bottom:10px}
+.acts em{color:var(--muted);font-style:normal}
+.notes .rel{margin:0 0 22px}
+.notes .rel>div{display:flex;gap:12px;align-items:baseline;margin-bottom:4px}
+.notes .v{font:700 17px var(--f-body);color:var(--gold)}
+.notes .d{color:var(--muted);font-size:14px}
+.notes ul{margin:0}
+.notes .rel.next .v{color:var(--muted)}
+.notes b{font-weight:500;color:#f0e4cc}
+details{margin:0 0 10px}
+summary{cursor:pointer;color:var(--gold)}
+kbd{font:14px/1 var(--f-body);background:#2a1e16;border:1px solid var(--edge);border-radius:3px;padding:1px 5px}
+footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--edge);color:var(--muted);font-size:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}.logo{width:220px;height:220px;border-radius:44px}header nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img src="assets/logo-512.png" alt="">
+  <a class="name" href="index.html">Ashen Depths</a>
+  <nav>
+    <a href="index.html#download">Download</a>
+    <a href="guide.html">Guide</a>
+    <a href="items.html">Items</a>
+    <a href="patchnotes.html" aria-current="page" style="color:var(--text)">Patch notes</a>
+    <a class="discord" href="https://discord.gg/cuWKFtwchz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.61 1.25a18.3 18.3 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.89 1.52.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 5.99 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-1.99a.08.08 0 0 0-.04-.11 13.1 13.1 0 0 1-1.87-.89.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.89a.08.08 0 0 0-.04.11c.36.7.77 1.36 1.22 1.99a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.98 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/></svg>Discord</a>
+  </nav>
+</header>
+
+<section class="floor" id="notes">
+<h2 style="border-top:0;margin-top:20px">Patch notes</h2>
+<p class="small">Everything that changed in each update. The game's title screen and the Discord announcements read these from this page. To update, open the game and click <b>Update</b> on the title screen.</p>
+    <div class="notes">
+      <article class="rel">
+        <div><div class="v">v1.0.10</div><div class="d">Build 2026-10-14 · Map fix</div></div>
+        <ul>
+          <li><b>The map shows where you are again.</b> After a town portal and back, the minimap and the full map (M) kept showing Ashen Hold instead of the floor or Act you returned to. They now show the area you're in, with everything you'd already explored.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.9</div><div class="d">Build 2026-10-14 · Item stats</div></div>
+        <ul>
+          <li><b>New item stat layout.</b> Every magic or better item has your class's main stat (Strength, Dexterity or Intelligence) and Vitality, then random <b>primary</b> stats for its slot, then <b>secondary</b> stats. Tooltips show the two groups separately.</li>
+          <li><b>How many stats:</b> magic items get 1 extra primary; rares get 2 primaries and 1 secondary; legendaries and set items both get 2 primaries and 2 secondaries. Legendaries no longer carry more stats than set items, and both roll on the same budget.</li>
+          <li><b>Primary stats by slot.</b> Boots can roll movement speed (most boots do). Weapons, helms, gloves, rings and amulets (and off-hands) can roll cooldown reduction. Resistance is Resistance to All Elements.</li>
+          <li><b>Secondary stats:</b> single-element resistances (physical, fire, cold, lightning, poison, arcane), gold find, the new <b>magic find</b>, health globe and potion healing, experience, thorns and life per kill.</li>
+          <li><b>Magic find</b> raises your chance of legendary and rare drops (+100% magic find doubles it).</li>
+          <li><b>Vitality rolls are smaller</b> since every item has it now; overall Life is about 10% higher than before.</li>
+          <li><b>Your old items keep their stats.</b> At the Enchantress, <b>Reroll all</b> gives an old item a fresh set under the new rules. Rerolling one stat keeps its kind: a primary becomes another primary, a secondary another secondary.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.8</div><div class="d">Build 2026-10-14 · Balance</div></div>
+        <ul>
+          <li><b>Every skill was tested and evened out.</b> Weak skills got stronger: Magic Missile, Frostbolt, Mana Sphere, Ray of Frost, Holy Bolt, Holy Nova, Word of Silence, Lightning Bolt, Frost Shock, Chain Lightning, Seeker Arrow, Arrow Storm, Judgment, Ice Ring and more. Skills that were far ahead were toned down: Flame Totem, Hydra, Spirit Hounds, Thunderstorm, Rend, Poison Dart, Multishot, Spring Trap and Meteor. Priests regain Faith faster (9 a second, was 6.5).</li>
+          <li><b>Bosses are real fights.</b> They have about 3.4 times the life and hit 40% harder. They used to die in 5 to 10 seconds; now expect 20 to 40.</li>
+          <li><b>Levelling takes longer.</b> Experience below level 50 is 30% lower.</li>
+          <li><b>Cinder is reachable.</b> Cinder 10 monsters now have 25 times normal life and 7 times the damage (was 80 times and 14 times). Each step up is still a clear jump.</li>
+          <li><b>More legendaries.</b> Legendary drops are 50% more common. Rare packs drop fewer set pieces while you level.</li>
+          <li><b>Co-op scaling.</b> Monsters get 70% more life for each extra player. Everyone gets 10% more experience per extra player, and each extra player adds a 60% chance of another loot drop made for their class.</li>
+          <li><b>Fix:</b> the game could freeze when a ranged monster stood exactly on top of a player.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.7</div><div class="d">Build 2026-10-13 · Co-op</div></div>
+        <ul>
+          <li><b>Co-op for 2 to 4 players through Steam.</b> On the title screen click <b>Host co-op</b>, then pick a hero. Friends click <b>Find games</b> and <b>Join</b>, or accept your Steam invite (Esc menu, Invite friends). Steam has to be running.</li>
+          <li><b>Your hero stays yours.</b> Each player keeps their own hero, bag, stash, gold and quests on their own PC. Loot you walk over goes to you. Experience from kills is shared.</li>
+          <li><b>The host leads the party.</b> The host picks where everyone goes: Acts, the depths, lairs and Trials. Anyone can open a town portal or walk through a portal.</li>
+          <li><b>Shows as Spacewar on Steam for now.</b> Until Ashen Depths has its own Steam page it uses Steam's free test app, so your friends list says you're playing Spacewar.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.6</div><div class="d">Build 2026-10-13 · Fixes</div></div>
+        <ul>
+          <li><b>Skills no longer lock up your mouse.</b> Some mouse, keyboard and lighting software shows up in Windows as a game controller with a button stuck down. The game read that as you holding a skill, so it kept casting it (Blizzard over and over) and blocked your left and right click. Anything a controller is already holding is now ignored until it is let go, so only real button presses count.</li>
+          <li><b>Windows close when you change area.</b> Going through a portal, gate or stairs closes every open window: inventory, hero, skills, quests and town or NPC windows.</li>
+          <li><b>Updates are faster and more reliable.</b> The update downloads in the background at full speed, installs over your current copy and restarts. Releases only need the setup file.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.5</div><div class="d">Build 2026-10-13 · One-click updates</div></div>
+        <ul>
+          <li><b>One-click Update.</b> When a new version is out, click <b>Update</b> on the title screen. The game downloads it, installs it over your current copy and restarts. It no longer sends you to the download page.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.4</div><div class="d">Build 2026-10-13 · Tooltip fix</div></div>
+        <ul>
+          <li><b>Item tooltips are back.</b> Hovering an item that has something equipped in the same slot, in your bag, the stash or any window that shows your inventory, showed an empty little box instead of the side-by-side comparison. It shows the full tooltip again.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.3</div><div class="d">Build 2026-10-13 · Easier levelling</div></div>
+        <ul>
+          <li><b>Easier levelling in the Acts.</b> Monsters in the four Acts and their boss lairs are back to their normal Life. The +50% Life from 1.0 now applies only in the depths, Abyssal Trials and uber lairs.</li>
+          <li><b>Safer saves.</b> Hero saves are checked after every write and the game keeps three backups. If the save file is ever damaged it loads the last good backup instead of starting with an empty hero list.</li>
+          <li><b>Stray controllers ignored.</b> Only real game controllers are read, so lighting, mouse or macro software that shows up as a controller can no longer press buttons or move your hero.</li>
+          <li><b>Update when you choose.</b> When a new version is out, the title screen shows an <b>Update now</b> button above the patch notes, and the game reminds you when you enter the world. Nothing downloads until you click it. The game then restarts into the new version.</li>
+          <li><b>Patch notes stay current.</b> The title screen loads the latest patch notes from the website, so you always see what is new.</li>
+          <li><b>Title screen art.</b> The title screen now shows the Ashen Depths key art under the logo.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0.2</div><div class="d">Build 2026-10-13 · Title screen and fixes</div></div>
+        <ul>
+          <li><b>New title screen.</b> Your heroes are listed down the left with New hero and Options at the bottom, and the right side shows these patch notes and the update status: checking, up to date, downloading, or ready.</li>
+          <li><b>Updates fixed.</b> The game now looks for the newest release by date, so the old beta releases on the download page no longer confuse it. The website's Download button works the same way.</li>
+          <li><b>Thunderhide.</b> The 2-piece now also gives 5 Rage per second, and the 5-piece pull actually drags nearby monsters in to you (elites at half speed, bosses stay put).</li>
+          <li><b>Crafted gear keeps up with you.</b> Items forged at the Blacksmith now roll at the item level of your highest cleared Abyssal Trial (tier T gives item level 52 + T, the same as Trial drops), or your level or deepest floor if those are higher. No more item level 1 crafts.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">v1.0</div><div class="d">Build 2026-10-13 · Full release</div></div>
+        <ul>
+          <li><b>Rebuilt on the Godot engine.</b> Ashen Depths no longer runs inside a web browser. The whole game is rewritten in C# on the Godot engine: every class, skill, item, Act, quest, Abyssal Trial, uber boss and Ashforged weapon works exactly as before, and hero stats come out identical.</li>
+          <li><b>Your heroes come with you.</b> The first time you start 1.0 it finds your heroes from the beta and adds them to your roster, with their gear, gems, stash, Ascension points and quest progress. Your key bindings, volume and graphics settings come across too.</li>
+          <li><b>Same look, now native.</b> Ashen Hold, the dungeons and the four open-world Acts use the same models, scenery and lighting as before, and the interface, from the HUD to every panel and tooltip, looks just like it did.</li>
+          <li><b>Live class portraits.</b> The hero select screen shows each class's 3D model moving in its idle pose.</li>
+          <li><b>Controller support carried over.</b> Xbox, PlayStation and standard controllers work as in the beta, with the menu cursor, button prompts and rumble.</li>
+          <li><b>Sound and music.</b> The same synthesized sound effects and 8-bit soundtrack, with smooth crossfades between town, the Acts, the depths and boss fights.</li>
+          <li><b>Graphics options.</b> Low, Medium and High quality in Options, a frame rate counter, and windowed, borderless or fullscreen display.</li>
+          <li><b>A proper installer.</b> The setup carries the whole game (about 60 MB), gives it its own icon and saves your heroes in <code>%APPDATA%\Ashen Depths</code>, so updating or uninstalling never touches them.</li>
+          <li><b>In-game updates.</b> From this version on, Ashen Depths checks for a new version when it starts, and you update from the title screen. No more reinstalling.</li>
+          <li><b>Installs just for you.</b> The game now installs to your own profile, so setup and updates never ask for administrator rights. If you had the old all-users copy, setup offers to remove it. Your heroes are not touched.</li>
+          <li><b>Every set reworked.</b> The 3-piece bonus is now a smaller damage boost (+50%, or +150% on uber sets), and every 5-piece bonus now changes how the skill plays and builds stacks of up to 20 that add damage plus Life, damage reduction, attack speed or movement speed. Thunderhide's Whirlwind now pulls enemies in and every hit grants a stack of Rage (+10% damage and +1% Life each). See the Item ledger for every set.</li>
+          <li><b>Tougher monsters.</b> Monsters in the depths, Abyssal Trials and uber lairs have 50% more Life.</li>
+          <li><b>Quest experience halved.</b> Quests give half the experience they used to.</li>
+          <li><b>Gem Altar.</b> After you beat an Abyssal Trial Guardian in time, a Gem Altar rises where it fell. Walk up and click it to upgrade your legendary gems, instead of the window popping up on its own.</li>
+          <li><b>Set pieces always roll your main stat.</b> Like rares and legendaries, every set piece now has Strength, Dexterity or Intelligence for your class.</li>
+          <li><b>No more skill lock.</b> Pressing a skill while holding down your attack now always casts it straight after the current swing, instead of being swallowed until you pressed it again.</li>
+          <li><b>Menus keep their place.</b> Scrolled panels no longer jump back to the top when you hover over a skill or item.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.5</div><div class="d">Build 2026-10-12v · Controller support</div></div>
+        <ul>
+          <li><b>Play with a controller.</b> Xbox, PlayStation and most standard controllers work out of the box. Left stick moves, right stick aims (let go to auto-aim at the nearest enemy), LT / RT are the left and right mouse buttons, X Y LB RB cast skills 1–4, A talks to NPCs and uses portals, B drinks a potion.</li>
+          <li><b>Menus by cursor.</b> With a panel open, the left stick moves a cursor: A clicks, X shift-clicks, B closes, the right stick scrolls. The D-pad opens Inventory, Skills, Map and Quests.</li>
+          <li><b>Button prompts and rumble.</b> The skill bar shows controller buttons while you play with one, and the controller rumbles on big hits and boss kills. Moving the mouse switches straight back.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.4</div><div class="d">Build 2026-10-12u · Quivers</div></div>
+        <ul>
+          <li><b>Quivers for Rangers.</b> Rangers now carry a quiver in the off-hand: flat damage, 8–15% attack speed and offensive properties. Three legendary quivers: Stormfletch Quiver, The Deadeye Quiver and Quiver of Endless Bounty. Ranger bows are two-handed.</li>
+          <li><b>Two-handed Ashforged.</b> Barbarian Ashforged weapons are always two-handed, with double damage and double-strength properties, and Ashforged weapons can't be dual-wielded.</li>
+          <li><b>Old Ashforged gear updated.</b> When you load a hero, every Ashforged item you own is re-forged at item level 100 with perfect rolls, keeping its socketed gems. Barbarian Ashforged weapons become two-handed. Ashforged gear on heroes below level 50 moves to the bag.</li>
+          <li><b>Trial exit fix.</b> If you own no legendary gems, clicking the Trial portal takes you straight home, and the upgrade panel always has a Return to Ashen Hold button.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.3.3</div><div class="d">Build 2026-10-12r · Ashforged rules</div></div>
+        <ul>
+          <li><b>Level 50 to equip.</b> Ashforged gear can only be equipped by level 50 heroes. The tooltip shows the requirement in red until you reach it.</li>
+          <li><b>Always item level 100.</b> Every Ashforged item, whether it drops, comes from an uber boss or is forged at the Blacksmith, is now item level 100.</li>
+          <li><b>GM:</b> <code>ashforged &lt;name&gt;</code> drops a specific Ashforged weapon, for example <code>ashforged cyclone</code>.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.3.2</div><div class="d">Build 2026-10-12p · Uber portal</div></div>
+        <ul>
+          <li><b>Click to leave an uber lair.</b> Like the Abyssal Trials, the portal that opens when an uber boss dies no longer pulls you out when you walk over it. Click it to return to Ashen Hold, so you can pick up your loot first.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.3.1</div><div class="d">Build 2026-10-12n · Sealbearers and a new Ashen Hold</div></div>
+        <ul>
+          <li><b>Click to leave a Trial.</b> Walking over the Trial portal no longer pulls you out. Click the portal (or use the button in the upgrade panel) to return to Ashen Hold. If you still have gem upgrades left, the first click opens the upgrade panel instead.</li>
+          <li><b>Trials stone moved.</b> The Abyssal Trials stone now stands in the west alcove of Ashen Hold, just above the Stash.</li>
+          <li><b>Sealbearers.</b> Uber bosses no longer use Trial Shards. On Cinder 1 or higher, each Act has a Sealbearer roaming its land, marked purple on your map. Each drops one key, and one key opens that Act's uber boss at the Altar of the Fallen.</li>
+          <li><b>A new look for Ashen Hold.</b> Cobbled streets, a rune-ringed hearth plaza, battlements and corner towers, houses beyond the walls, braziers, wall torches, banners, market stalls, and embers and ash drifting through the air.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.3</div><div class="d">Build 2026-10-12k · Ashforged sets</div></div>
+        <ul>
+          <li><b>Ashforged sets.</b> Salvaging any Ashforged item gives an Ashen Core. The Blacksmith now forges an Ashforged version of any piece from all four of your class's sets, uber sets included, for 3 Ashen Cores, 3 Bound Sigils, 3 Ember Cores and 25,000 gold.</li>
+          <li><b>Item level cap.</b> Ashforged items are capped at item level 100, so Ashforged gear no longer grows forever with Trial tier. Crafted Ashforged pieces roll at item level 70–100, rising with your highest Trial tier.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.2.1</div><div class="d">Build 2026-10-12j · Cinder difficulty</div></div>
+        <ul>
+          <li><b>Cinder difficulty.</b> The campaign is played on Normal. Beat the Pale King to unlock Cinder 1–10 in Options, changeable in Ashen Hold. Each level makes monsters 55% tougher and 30% deadlier, with more experience, gold and legendaries.</li>
+          <li><b>Abyssal Trials replace the Challenge Dungeons.</b> The Trials stone now stands where the Challenge Dungeons were. Trials and uber bosses need Cinder 1 or higher; Cinder does not change Trial difficulty.</li>
+          <li><b>Speed opens tiers.</b> The faster you clear, the further ahead you can go: a very fast clear opens up to 9 tiers at once.</li>
+          <li><b>Portal at your feet.</b> When a Trial Guardian dies, the portal home opens right next to you.</li>
+          <li><b>Quests moved.</b> The Scrap Imp now comes from any Act lieutenant or Act boss after you accept Nadia's quest. The Greater and Grand Bands of Kinship come from clearing Trial tiers 5 and 15 in time.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.1</div><div class="d">Build 2026-10-12h · The Abyss</div></div>
+        <ul>
+          <li><b>Abyssal Trials.</b> A new stone in Ashen Hold opens after the campaign. Pick a tier, fill the bar, and kill the Guardian within 10 minutes to unlock the next tier. Rewards include Ascension experience, uber Shards and legendary gem upgrades.</li>
+          <li><b>Legendary gems.</b> Eight new gems for rings and amulets only, with ranks that climb without limit: Emberheart, Headsman's Garnet, Tyrant's Eye, Bloodstone, Storm Seal, Wardstone, Quickening Pearl and Echo Shard.</li>
+          <li><b>Uber bosses.</b> Lay one of each Shard on the new Altar of the Fallen to summon one of four ubers in its own dungeon: Varrok the Ashen Tyrant, Ysolde, Mother of the Mire, Ghorvan the Molten Heart and the Hollow Sovereign.</li>
+          <li><b>Ashforged gear.</b> Red items with perfect rolls pushed 60% higher and 50% more base damage or armor. Every uber drops an Ashforged weapon built for one of your sets, and after Trial tier 50 any legendary or set drop can come Ashforged.</li>
+          <li><b>12 uber sets,</b> two more per class built around secondary skills, dropped only by ubers.</li>
+          <li><b>No more killing bosses through walls.</b> Bosses only take damage when you have a clear line to them.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 2.0</div><div class="d">Build 2026-10-12g · Music and boss lairs</div></div>
+        <ul>
+          <li><b>An 8-bit soundtrack.</b> Eight looping chiptune tracks: the title screen, Ashen Hold, one for each Act, the Challenge Dungeons, and a boss theme that kicks in when a boss is near. Set the Music volume in Options.</li>
+          <li><b>Act bosses wait in their own dungeon.</b> Explore the Act and kill both lieutenants in the open world. Once Captain Rhea sends you after the Act boss, its lair opens into a dungeon with the boss at the far end. Its portal takes you back to the Act.</li>
+          <li><b>Fixed</b> bosses not appearing after you accepted their quest in town and returned by portal.</li>
+          <li><b>Shatter all at the Jeweler.</b> Break all your Rough, Cut and Polished gems, or every gem except Radiant, in one click.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 1.9.2</div><div class="d">Build 2026-10-12e · Performance</div></div>
+        <ul>
+          <li><b>Lag spikes fixed.</b> Monster pathfinding in the open world was badly broken and could take most of each frame once a few packs chased you. It now runs about 60 times faster.</li>
+          <li><b>No more boss cheese.</b> Bosses and elites that get stuck behind trees or rock leap to your side.</li>
+          <li><b>Set pieces from level 30.</b> Set pieces drop only once your hero reaches level 30.</li>
+          <li><b>Scrap Imp.</b> A newly earned imp starts with salvaging off; choose what it salvages in the Hero panel.</li>
+          <li><b>Fixed</b> magic items sometimes being named "undefined".</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 1.9.1</div><div class="d">Build 2026-10-12d · Loot and fixes</div></div>
+        <ul>
+          <li><b>Bigger windows.</b> Inventory, Hero, Skills, Codex, Options and the town artisans' windows are about 30% larger, with bigger text.</li>
+          <li><b>No more stairways in the Acts.</b> The endless depths now open only through the Challenge Dungeons stone, after all four Acts.</li>
+          <li><b>Gems follow your progress.</b> Gem quality rises with each Act you complete instead of the floor you are on. Radiant gems can drop from Challenge Dungeon bosses.</li>
+          <li><b>Set pieces from the Acts.</b> Every Act boss drops a set piece, and rare monsters in the Acts drop them more often.</li>
+          <li><b>Bound Sigils.</b> Salvaging a set piece gives a Bound Sigil. Forging a set piece at the Blacksmith now costs 3.</li>
+          <li><b>10 new legendaries,</b> class-specific, bringing the total to 150.</li>
+          <li><b>Every monster and lair is reachable.</b> The open world no longer seals packs or boss lairs behind trees and rock.</li>
+          <li><b>Smoother skills.</b> A skill pressed during Leap or another cast now fires as soon as it ends, instead of being dropped.</li>
+          <li><b>Fixes.</b> The return portal names the Act you left instead of a floor number, and loot, gold and damage in the Acts scale with the monster you fight.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 1.8</div><div class="d">Build 2026-10-12b · Single player</div></div>
+        <ul>
+          <li><b>Player guide.</b> A new guide page covers the controls, every system, all four Acts and their quests, the 12 class sets and all 140 legendaries.</li>
+          <li><b>Single player only.</b> Ashen Depths is a single-player game for now. The title screen, Options and Codex are simpler as a result.</li>
+          <li><b>Lighter install.</b> The game no longer opens network ports or asks for firewall access. Updating over an older install cleans up the leftover files.</li>
+          <li><b>Your heroes are safe.</b> Saved heroes carry over unchanged, and uninstalling now keeps your saves folder.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Beta 1.7</div><div class="d">Build 2026-10-12a · The Acts</div></div>
+        <ul>
+          <li><b>The World Gate.</b> The town gate now leads to four open-world Acts, each with its own look, level band, stairways into the depths, a cultist camp, a landmark and three boss lairs.</li>
+          <li><b>Act II, III and IV.</b> The Drowned Fens (levels 14–30), the Cinder Wastes (26–42) and the Pale Citadel (38–54) join the Ashen Reach. Each Act unlocks when you kill the previous Act's boss.</li>
+          <li><b>Twelve bosses.</b> Two lieutenants and an Act boss per Act. Act bosses have more health, more affixes and bigger escorts, and drop legendaries. The Pale King drops two.</li>
+          <li><b>Quests by Act.</b> Captain Rhea's quests are grouped by Act. The quest log <kbd>J</kbd> shows your Act progress, and the big map marks only the objectives for the Act you're in.</li>
+          <li><b>Challenge Dungeons.</b> The Waystone is now the Challenge Dungeons stone. It stays sealed until all four Acts are complete and shows how many you've finished.</li>
+          <li><b>Saves carry over.</b> Your old quest progress maps onto Act I, so a Kinbreaker you already killed stays killed.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><div class="v">Earlier</div><div class="d">First desktop builds</div></div>
+        <ul>
+          <li><b>Desktop app.</b> Ashen Depths now installs as a Windows game with a one-click installer.</li>
+          <li><b>Six classes:</b> Barbarian, Paladin, Ranger, Shaman, Sorcerer and Priest.</li>
+          <li><b>Town artisans.</b> The Blacksmith salvages and forges, the Jeweler fuses and sockets gems, the Enchantress rerolls properties, and the Stash holds extra loot.</li>
+          <li><b>Endless descent.</b> Find the portal on each floor to go deeper. Every fifth floor holds a boss.</li>
+          <li><b>Ascension</b> <kbd>P</kbd> keeps your hero growing after the level cap.</li>
+        </ul>
+      </article>
+      <article class="rel next">
+        <div><div class="v">Next</div><div class="d">Planned</div></div>
+        <ul>
+          <li>Better shadows and lighting effects now that the game runs on Godot</li>
+          <li>Three new classes: Druid, Monk and Warlock</li>
+          <li>More detailed characters and gear</li>
+        </ul>
+      </article>
+    </div>
+</section>
+
+<footer>Ashen Depths is made by wadski. It's a hobby project and still being worked on; if something breaks, say so on <a href="https://discord.gg/cuWKFtwchz">Discord</a>.</footer>
+
+</div>
+</body>
+</html>
