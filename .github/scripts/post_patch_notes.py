@@ -4,7 +4,7 @@ Every post ends with a "How to update" section.
 DRY_RUN=1 prints the message instead of sending it."""
 import html, json, os, re, sys, time, urllib.request
 
-page = open("index.html", encoding="utf-8").read()
+page = open("patchnotes.html", encoding="utf-8").read()
 notes = []
 for art in re.findall(r'<article class="rel">(.*?)</article>', page, re.S):
     v = re.search(r'<div class="v">(.*?)</div>', art); d = re.search(r'<div class="d">(.*?)</div>', art)
