@@ -159,7 +159,8 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--edge);color:v
 var D=null;
 // slot keys used in the URL, in display order
 var GEAR=[["w","weapon","Weapon"],["o","offhand","Off-hand"],["h","helm","Helm"],["c","chest","Chest"],["g","gloves","Gloves"],["l","legs","Legs"],["b","boots","Boots"],["r1","ring","Ring 1"],["r2","ring","Ring 2"],["a","amulet","Amulet"]];
-var GEMSLOT={w:"wg",h:"hg",c:"cg",l:"lg"}, LGSLOT={r1:"r1g",r2:"r2g",a:"ag"};
+var GEMSLOT={w:["wg"],h:["hg"],c:["cg","cg2"],l:["lg","lg2"]},   // chest and legs have two sockets, as in the game
+    LGSLOT={r1:"r1g",r2:"r2g",a:"ag"};
 var PORTRAIT={demonhunter:"ranger"};
 var STAT={wdmg:"+{v} Damage",xp:"+{v}% Experience",str:"+{v} Strength",dex:"+{v} Dexterity",int:"+{v} Intelligence",vit:"+{v} Vitality",critDmg:"+{v}% Critical Hit Damage",gold:"+{v}% Gold Find",thorns:"{v} Thorns damage",rcr:"Reduces resource costs by {v}%",loh:"+{v} Life per Hit",lifePct:"+{v}% Life",elite:"+{v}% damage to elites",cdr:"Reduces cooldowns by {v}%",all:"+{v} to all stats"};
 var NO_B3=["stormfury","shadowfang","earthwarden","dawnbringer"];
@@ -213,7 +214,7 @@ function encode(){
   if(!S.cls)return "";
   var p=["v1",S.cls,S.set||"-"];
   GEAR.forEach(function(g){if(S.gear[g[0]])p.push(g[0]+"="+S.gear[g[0]]);});
-  ["wg","hg","cg","lg"].forEach(function(k){if(S.gem[k])p.push(k+"="+S.gem[k]);});
+  ["wg","hg","cg","cg2","lg","lg2"].forEach(function(k){if(S.gem[k])p.push(k+"="+S.gem[k]);});
   ["r1g","r2g","ag"].forEach(function(k){if(S.lg[k])p.push(k+"="+S.lg[k]);});
   S.sk.forEach(function(v,i){if(v!=null)p.push("s"+(i+1)+"="+v);});
   S.pa.forEach(function(v,i){if(v!=null)p.push("p"+(i+1)+"="+v);});
@@ -226,7 +227,7 @@ function decode(h){
   var gk=GEAR.map(function(g){return g[0];});
   p.slice(3).forEach(function(kv){var i=kv.indexOf("=");if(i<1)return;var k=kv.slice(0,i),v=decodeURIComponent(kv.slice(i+1));
     if(gk.indexOf(k)>=0)st.gear[k]=v;
-    else if(/^(wg|hg|cg|lg)$/.test(k))st.gem[k]=v;
+    else if(/^(wg|hg|cg2?|lg2?)$/.test(k))st.gem[k]=v;
     else if(/^(r1g|r2g|ag)$/.test(k))st.lg[k]=v;
     else if(/^s[1-6]$/.test(k)&&/^\d+$/.test(v))st.sk[+k[1]-1]=+v;
     else if(/^p[1-4]$/.test(k)&&/^\d+$/.test(v))st.pa[+k[1]-1]=+v;});
@@ -292,9 +293,9 @@ function renderGear(){
     ch.forEach(function(id){var x=D.legends[id];var dis=(id==="kinship"&&((k==="r1"&&kin2)||(k==="r2"&&kin1)));o+=opt(id,x.name+(x.ashforged?" (Ashforged)":"")+(dis?" — already worn":""),v===id,dis);});
     h+='<select id="sel-'+k+'" data-gear="'+k+'"'+(k==="o"&&ch.length===0?" disabled":"")+'>'+o+'</select>';
     var x=L(v);h+='<p class="desc'+(x?" leg":v==="set"?" set":"")+'">'+(x?esc(x.desc):v==="set"&&setName?esc(setName)+" piece":"")+'</p>';
-    if(GEMSLOT[k]){var gk=GEMSLOT[k],gv=S.gem[gk]||"",go=opt("","No gem",!gv);
+    if(GEMSLOT[k])GEMSLOT[k].forEach(function(gk,si,all){var gv=S.gem[gk]||"",go=opt("","No gem",!gv);
       Object.keys(D.gems).forEach(function(gm){for(var r=1;r<=6;r++)go+=opt(gm+r,gemLabel(gm,slot,r),gv===gm+r);});
-      h+='<div class="sock"><label for="sel-'+gk+'">Socket</label><select id="sel-'+gk+'" data-gem="'+gk+'">'+go+'</select></div>';}
+      h+='<div class="sock"><label for="sel-'+gk+'">Socket'+(all.length>1?" "+(si+1):"")+'</label><select id="sel-'+gk+'" data-gem="'+gk+'">'+go+'</select></div>';});
     if(LGSLOT[k]){var lk=LGSLOT[k],lv=S.lg[lk]||"",lo=opt("","No legendary gem",!lv);
       Object.keys(D.lgems).forEach(function(id){var used=Object.keys(S.lg).some(function(o2){return o2!==lk&&S.lg[o2]===id;});lo+=opt(id,D.lgems[id].name+(used?" — already used":""),lv===id,used);});
       h+='<div class="sock"><label for="sel-'+lk+'">Legendary gem</label><select id="sel-'+lk+'" data-lg="'+lk+'">'+lo+'</select><p class="desc">'+(lv?esc(D.lgems[lv].desc)+" (rank 1)":"")+'</p></div>';}
@@ -316,7 +317,7 @@ function exportText(){
   if(!S.cls)return "";
   var out=["Ashen Depths build · "+clsName(S.cls)+(S.set?" · "+D.sets[S.set].name:"")];
   GEAR.forEach(function(g){var v=S.gear[g[0]];if(!v)return;var t=v==="set"?(S.set?D.sets[S.set].name+" (set)":"Set piece"):D.legends[v].name;
-    var gk=GEMSLOT[g[0]],lk=LGSLOT[g[0]];if(gk&&S.gem[gk]){var m=/^([a-z]+)(\d)$/.exec(S.gem[gk]);t+=" + "+D.gems[m[1]].name+" "+m[2];}if(lk&&S.lg[lk])t+=" + "+D.lgems[S.lg[lk]].name;
+    var lk=LGSLOT[g[0]];(GEMSLOT[g[0]]||[]).forEach(function(gk){if(!S.gem[gk])return;var m=/^([a-z]+)(\d)$/.exec(S.gem[gk]);t+=" + "+D.gems[m[1]].name+" "+m[2];});if(lk&&S.lg[lk])t+=" + "+D.lgems[S.lg[lk]].name;
     out.push(g[2]+": "+t);});
   var C=D.classes[S.cls],sk=S.sk.filter(function(v){return v!=null;}).map(function(v){return C.skills[v].n;}),pa=S.pa.filter(function(v){return v!=null;}).map(function(v){return C.passives[v].n;});
   if(sk.length)out.push("Skills: "+sk.join(", "));if(pa.length)out.push("Passives: "+pa.join(", "));
